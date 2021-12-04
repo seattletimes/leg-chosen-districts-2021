@@ -1,0 +1,159 @@
+@import "seattletimes";
+
+// .spacer {
+//   height: 62px;
+//   width: 100%;
+//
+//   @media @mobile {
+//     height: 0px;
+//   }
+// }
+
+@keyframes spinner {
+to {transform: rotate(360deg);}
+}
+
+.direction {
+  color: #6d6d6d;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 10px auto 5px auto;
+}
+
+
+.interactive {
+  max-width: 1000px;
+  margin: auto;
+  font-size: 0px;
+
+  .source-container {
+    @media @tablet { margin-top: 50px; }
+  }
+
+  .data-source, .art-credit {margin-top: 0px;}
+
+  .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+    @media @tablet {
+      grid-template-columns: 100%;
+      grid-template-rows: 50% 50%;
+    }
+  }
+
+
+
+
+
+
+  .main {
+    // display: inline-block;
+    // width: 50%;
+    .graphic-hed {
+      margin-bottom: 10px;
+      @media @tablet { margin-bottom: 10px; }
+    }
+
+    padding: 10px;
+    border-left: 2px solid black;
+    @media @tablet {
+      border-left: none;
+      // border-bottom: 2px solid black;
+      padding: 0px;
+    }
+  }
+
+.compare {
+  .graphic-hed { margin-bottom: 10px;}
+  // display: inline-block;
+  // width: 50%;
+  padding: 10px;
+  border-bottom: none;
+  @media @tablet { padding: 0px; padding-top: 10px; border-bottom: 2px solid black; }
+  vertical-align: top;
+
+  .content {
+    font-size: 15px;
+    // width: calc(~"100% - 150px");
+    .city {
+      display: none;
+      position: relative;
+
+      iframe {
+        background-color: white;
+      }
+
+      .spinner {
+        display: block;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        z-index: -1;
+        .fas.fa-spinner { animation: spinner 1s linear infinite;}
+      }
+
+      &.show {
+        display: block;
+      }
+
+      &.selected {
+        background-color: red;
+      }
+    }
+  }
+
+
+
+  .navBar {
+    border: 1px solid black;
+    margin-bottom: 10px;
+    .group {
+      width: 100%;
+    }
+    .group:first-child {
+      border-bottom: 1px solid black;
+      @media @tablet {
+        border-bottom: none;
+      }
+    }
+    .w3-bar-item {
+      display: inline-block;
+      border: none;
+      padding: 5px 10px;
+      letter-spacing: 1px;
+      // height: 25%;
+      width: 50%;
+      cursor: pointer;
+
+      @media @tablet {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid black;
+      }
+
+      &.selected {
+        background-color: @df-off-black;
+        color: white;
+      }
+    }
+    .w3-bar-item:hover {
+      background-color: #464646;
+      color: white;
+    }
+    .w3-bar-item:nth-child(odd) {
+      border-right: 1px solid black;
+      @media @tablet {
+        border-right: none;
+      }
+    }
+  }
+}
+
+
+}

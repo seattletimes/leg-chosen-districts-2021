@@ -1,0 +1,22 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "anemic-foam"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2021/local/washington-final-adopted-legislative-districts"
+    }
+  },
+  "title": "",
+  "description": "",
+  "author": "",
+  "url": "",
+  "post_id": 0,
+  "image": "assets/social.jpg",
+  "sheets": [],
+  "docs": [],
+  "embedded": true,
+  "production": true
+}
